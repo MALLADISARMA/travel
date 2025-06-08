@@ -1,0 +1,119 @@
+/* navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover,
+  .navbar-menu .active {
+    color: #007BFF; /* blue tourist-friendly shade */
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 4px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-search-icon {
+    position: relative;
+  }
+  
+  .navbar-search-icon .dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .navbar-right button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-right button:hover {
+    background-color: #0056b3;
+  }
+  
+  .navbar-profile {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .navbar-profile img {
+    height: 36px;
+    border-radius: 50%;
+  }
+  
+  .nav-profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .nav-profile-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+  }
+  
+  hr {
+    margin: 5px 0;
+    border: none;
+    border-top: 1px solid #eee;
+  }
+  

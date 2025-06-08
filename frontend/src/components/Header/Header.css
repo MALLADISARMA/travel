@@ -1,0 +1,71 @@
+.header {
+    height: 75vh; /* Set height to 50% of the viewport height */
+    margin: 40px auto; /* Adjust vertical spacing */
+    background: url('/headerpic.jpg') no-repeat  ; /* Center the image */
+    background-size:cover; /* Ensure the entire image is visible */
+    position: relative;
+    border-radius: 40px;/* For positioning adjustments */
+}
+.header-contents{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:1.4vw;
+    max-width:33%;
+    bottom:20%;
+    left:5vw;
+    animation:fadeIn 5s;
+
+}
+.header-contents h2{
+    font-weight:280;
+    color:black;
+    font-size:max(4.5vw,22px);
+}
+.header-contents p{
+    color:black;
+    font-size: 1.1vw; /* Slightly increase font size for readability */
+    font-weight: 500; /* Use semi-bold for a less heavy look */
+    text-shadow: 0px 1px 2px rgba(39, 41, 32, 0.2); /* Subtle shadow for better contrast */
+    line-height: 1.5; 
+    
+}
+.header-contents button{
+    border:none;
+    color:#747474;
+    font-weight:500;
+    padding:1vw 2.3vw;
+    background-color:white;
+    font-size:max(1vw,13px);
+    border-radius:50px;
+
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@media (max-width:1050px){
+    .header{
+        height:38vm;
+    }
+    .header-contents{
+        max-width:45%;
+    }
+}
+@media (max-width:750px){
+    
+    .header-contents{
+        max-width:55%;
+    }
+    .header-contents p{
+        display:none;
+    }
+    .header-contents button{
+        padding:2vm 4vm;
+    }
+}

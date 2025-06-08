@@ -1,0 +1,18 @@
+.navebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a premium look */
+}
+
+.logo {
+    height: 80px; /* Increased size for a stronger brand presence */
+}
+
+.profile {
+    height: 60px; /* Bigger size for better visibility */
+    cursor: pointer;
+    border-radius: 50%; /* Optional: Makes it circular for a sleek look */
+}

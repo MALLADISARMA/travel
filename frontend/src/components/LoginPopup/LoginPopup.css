@@ -1,0 +1,136 @@
+/* General styling for the login popup */
+.login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: linear-gradient(145deg, #e0f7ff, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: popupFadeIn 0.5s ease-in-out;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Animation for popup */
+@keyframes popupFadeIn {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
+/* Container styling */
+.login-popup-container {
+  padding: 20px 30px;
+}
+
+/* Title styling */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-popup-title h2 {
+  font-size: 24px;
+  color: #2c7bff;
+  margin: 0;
+}
+
+.login-popup-title img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.login-popup-title img:hover {
+  transform: scale(1.2);
+}
+
+/* Input fields styling */
+.login-popup-inputs input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #b3d7ff;
+  border-radius: 8px;
+  background-color: #f8fbff;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #2c7bff;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2c7bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1a5ed9;
+  transform: scale(1.05);
+}
+
+/* Terms and conditions styling */
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.login-popup-condition input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.login-popup-condition p {
+  font-size: 12px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+/* Toggle between login and sign-up */
+.login-popup form p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2c7bff;
+  text-align: center;
+}
+
+.login-popup form span {
+  color: #ff6b6b;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.login-popup form span:hover {
+  color: #ff4040;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 500px) {
+  .login-popup {
+      width: 90%;
+  }
+}
