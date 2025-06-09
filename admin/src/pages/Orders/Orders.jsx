@@ -38,6 +38,21 @@ const Orders = ({ url }) => {
     }
   };
 
+  const deleteOrder = async (orderId) => {
+    try {
+      const response = await axios.post(url + "/api/order/delete", { orderId });
+      if (response.data.success) {
+        toast.success("Order deleted successfully");
+        fetchAllOrders(); // refresh list
+      } else {
+        toast.error("Failed to delete order");
+      }
+    } catch (error) {
+      toast.error("Error deleting order");
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     fetchAllOrders();
   }, []);
@@ -49,6 +64,9 @@ const Orders = ({ url }) => {
         {orders.length === 0 && <p>No orders found.</p>}
         {orders.map((order, index) => (
           <div key={index} className='order-item'>
+            {/* Delete button */}
+            <button className="order-delete" onClick={() => deleteOrder(order._id)}>X</button>
+
             <img
               src="https://img.icons8.com/?size=100&id=WC4qa7sbIuMg&format=png&color=000000"
               alt="order icon"
