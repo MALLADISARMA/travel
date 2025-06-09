@@ -141,3 +141,21 @@
     margin-top: 12px;
   }
 }
+.order-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.order-item {
+  position: relative;
+  /* Add your existing styling here */
+}
+
