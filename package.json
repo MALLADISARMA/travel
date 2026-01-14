@@ -2,7 +2,7 @@
   "name": "travel-mern-app",
   "private": true,
   "scripts": {
-    "build": "cd backend && npm install && cd ../frontend && npm install && npm run dev && cd ../admin && npm install && npm run dev",
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run dev",
     "start": "npm start server"
   }
 }
