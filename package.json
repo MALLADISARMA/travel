@@ -3,6 +3,6 @@
   "private": true,
   "scripts": {
     "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
-    "start": "npm start server"
+    "start": "npm server"
   }
 }
